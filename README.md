@@ -34,6 +34,22 @@ Oswald for display, Inter for text, one red against near-black. The barbers are
 typographic cards rather than headshots — a concept site should not put a
 stranger's face on a business that does not exist.
 
+## Pages
+
+Five real pages, not anchors on one:
+
+| Path | What is on it |
+|---|---|
+| `/` | Hero, a short price teaser, the barbers, gallery strip |
+| `/services/` | Full price list, opening hours, address, FAQ |
+| `/barbers/` | Each barber with the services they take |
+| `/gallery/` | The photographs, full size on click |
+| `/book/` | The four-step booking flow |
+
+Vite builds each from its own HTML entry and React root, so the URLs are real and
+there is no client-side router. Rollup splits React and the shared chrome into one
+chunk the browser keeps between pages, leaving 1-8 kB per page.
+
 ## Run locally
 
 ```bash
